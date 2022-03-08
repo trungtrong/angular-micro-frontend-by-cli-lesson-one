@@ -1,0 +1,63 @@
+//
+// App
+$side-panel-min-width: 60px;
+$card-shadow: rgba(63, 63, 63, 0.14) 0px 1px 3px 0px, rgba(63, 63, 63, 0.15) 0px 1px 2px 0.5px;
+
+$primary-color: #5e5c78;
+$secondary-color: #e0ddfd;
+$secondary-dark-color: #c8c5e1;
+$third-color: #6c66a6;
+$third-dark-color: #54526f;
+$color: #d0a6da;
+
+$icon-main-color: #aaa5d6;
+
+@mixin main-font-family {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin d-flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+$white-color: #fff;
+$white-color-15: rgba(255, 255, 255, 0.15);
+$white-color-10: rgba(255, 255, 255, 0.1);
+
+$black-color-50: rgba(0, 0, 0, .5);
+
+$text-color: #5e5c78;
+$text-color-35: rgba(94, 92, 120, .35);
+$sidebar-text-color: #c2c2c2;
+$sidebar-text-dark-color: #999;
+
+$background-dark-color: #151b26;
+$background-box-shadow: rgba(94, 92, 120, .5);
+
+$background-hover-10: rgba(0, 0, 0, .1);
+$background-hover: #e6e6e8;
+
+$main-border-color: #ddd;
+
+$font-size-header: 1.8em;
+$font-size-title: 1.5em;
+$font-size-subtitle: 1.3em;
+$font-size-content: 1.1em;
+$font-size-small-text: 0.9em;
+
+$line-height-content: 1.5;
+$line-height-title: 1.3;
+
+//
+// Devextreme
+$base-accent: rgba(0, 163, 156, 1);
+$base-text-color: rgba(51, 51, 51, 1);
+$base-bg: rgba(255, 255, 255, 1);
+$base-border-color: rgba(221, 221, 221, 1);
+$base-success: rgba(92, 184, 92, 1);
+$base-warning: rgba(240, 173, 78, 1);
+$base-danger: rgba(217, 83, 79, 1);
+$base-border-radius: 2px;
+$base-button-color: #fff;

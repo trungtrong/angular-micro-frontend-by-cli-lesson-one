@@ -1,0 +1,29 @@
+<div class="user-panel">
+    <div class="user-info" *ngIf="currentUser">
+        <div id="imageContainer" class="image-container">
+            <div id="userAvatar" class="user-image d-flex justify-content-center"
+                 (click)="isOpenMenu = !isOpenMenu">
+                <img *ngIf="currentUser?.avatarImg" src="{{currentUser.avatarImg}}">
+                <div *ngIf="!currentUser?.avatarImg" class="name-avatar">
+                    {{currentUser.nameAvatar}}
+                </div>
+            </div>
+        </div>
+        <div class="user-name">{{currentUser.fullName}}</div>
+    </div>
+</div>
+
+<ng-container *ngIf="isOpenMenu">
+    <dx-popover class="user-menu" (onHidden)="isOpenMenu = false" [visible]="true"
+        [target]="'#userAvatar'"
+        position="top" [width]="180">
+        <div class="menu-wrapper">
+          <a class="dropdown-item pointer">
+              <i class="fas fa-user"></i> Profile
+          </a>
+          <a class="dropdown-item pointer" (click)="logOut()">
+              <i class="fas fa-sign-out-alt"></i> Log Out
+          </a>
+        </div>
+    </dx-popover>
+</ng-container>

@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+<!--
+    Showing A Loading Indicator For Lazy-Loaded Route Modules
+    Handle with slow network
+ -->
+<div *ngIf="isShowingRouteLoadIndicator"
+    class="router-load-indicator">
+    Loading Module
+</div>

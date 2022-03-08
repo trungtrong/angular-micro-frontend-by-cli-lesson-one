@@ -1,0 +1,79 @@
+@import "variables";
+
+:host {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.layout-header {
+    z-index: 1501;
+}
+
+.layout-body {
+    flex: 1;
+    min-height: 0;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.side-bar-container {
+    position: absolute;
+    width: 240px;
+    left: 0;
+    bottom: 0;
+    transition: left ease-in-out 250ms;
+}
+
+.side-bar-hidden {
+    left: -240px;
+}
+
+.app-content {
+    display: flex;
+    //min-width: 992px;
+    flex-direction: column;
+    position: absolute;
+    left: 240px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    transition: left ease-in-out 250ms;
+    overflow: auto;
+    height: 100%;
+}
+
+.app-content-full {
+    left: 0;
+}
+
+.menu-button {
+    padding: 10px;
+    cursor: pointer;
+    color: $sidebar-text-dark-color;
+    font-size: 1.3em;
+
+    &:hover {
+        color: $sidebar-text-color;
+    }
+}
+
+.open-menu-button {
+    font-size: 1.3em;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    color: $sidebar-text-dark-color;
+
+    &:hover {
+        color: $text-color;
+    }
+}

@@ -1,0 +1,73 @@
+@import "variables";
+@import "mixins";
+
+:host {
+    @include flexbox();
+    @include flex-direction(column);
+    min-height: 100%;
+    height: 100%;
+    width: 240px !important;
+    background-color: #e0e0e0;
+
+    .side-bar-container {
+        height: 100%;
+        background-color: $background-dark-color;
+        overflow: auto;
+
+        .side-bar-item {
+            font-size: 1.1em;
+            font-weight: 400;
+            color: $sidebar-text-color;
+        }
+
+        #logo {
+            font-family: Roboto;
+            font-size: 1.5em;
+            height: 60px;
+            line-height: 60px;
+            text-decoration: none;
+            color: $sidebar-text-color;
+        }
+
+        .menu-logo {
+            padding: 0 15px;
+        }
+
+        .user-menu {
+            width: 100%;
+        }
+
+        .menu-container {
+            min-height: 100%;
+            display: flex;
+            flex: 1;
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .active {
+            background-color: $white-color-15 !important;
+        }
+
+        .menu-content {
+            @include flex;
+            cursor: pointer;
+            line-height: 35px;
+            padding: 0 15px;
+            text-decoration: none;
+            color: $sidebar-text-color;
+
+            &:hover {
+                background-color: $white-color-10;
+            }
+
+            &.active {
+                background-color: $white-color-10;
+            }
+
+            .nav-title {
+                font-weight: 500;
+            }
+        }
+    }
+}

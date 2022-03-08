@@ -1,0 +1,18 @@
+<div class="side-bar-container">
+    <div class="side-bar-item d-flex justify-content-start flex-column">
+        <div id="collapse-button" class="menu-logo d-flex align-items-center justify-content-between">
+            <a href="/" id="logo" class="d-block">
+                <i class="fas fa-crow"></i>
+            </a>
+            <ng-content></ng-content>
+        </div>
+        <div class="menu-wrapper">
+            <div *ngFor="let page of pages" class="menu-item">
+                <a [routerLink]="page.routerLink" routerLinkActive="active" class="d-block menu-content">
+                    <span [innerHTML]="page.icon" class="font-icon"></span>
+                    <span class="nav-title ml-2">{{ page.text }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

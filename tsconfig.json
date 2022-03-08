@@ -1,0 +1,88 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "src",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "es2015",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "paths": {
+            "jszip": [
+                "../node_modules/jszip/dist/jszip.min.js"
+            ],
+            "@environment": [
+                "environments/environment.ts"
+            ],
+            "@environments/*": [
+                "environments/*"
+            ],
+            "@app/utilities": [
+                "app/utilities"
+            ],
+            "@app/core/*": [
+                "app/core/*"
+            ],
+            "@app/theme": [
+                "app/theme"
+            ],
+            "@app/modules/*": [
+                "app/modules/*"
+            ],
+            "@app/shared/*": [
+                "app/shared/*.ts"
+            ],
+            "@app/shared/components": [
+                "app/shared/components/index.ts"
+            ],
+            "@app/shared/components/*": [
+                "app/shared/components/*"
+            ],
+            "@app/shared/models": [
+                "app/shared/models/index.ts"
+            ],
+            "@app/services/endpoints": [
+                "app/services/endpoints.ts"
+            ],
+            "@app/services/*": [
+                "app/services/*"
+            ],
+            "@app/models": [
+                "app/models"
+            ],
+            "@app/models/*": [
+                "app/models/*"
+            ],
+            "@app/data/*": [
+                "app/data/*"
+            ],
+            "@app/state/*": [
+                "app/state/*"
+            ],
+            "@svg-icons": [
+                "assets/icons/svg-icons.constants.ts"
+            ]
+        }
+    },
+    "angularCompilerOptions": {
+        "annotationsAs": "static fields",
+        "annotateForClosureCompiler": true,
+        "preserveWhitespaces": false,
+        "fullTemplateTypeCheck": true,
+        "strictTemplates": true,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+    }
+}
