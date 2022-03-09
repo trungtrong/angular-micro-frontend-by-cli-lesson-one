@@ -8,7 +8,8 @@ export class UserModel {
     refreshToken: string;
 
     // UI only
-    nameAvatar: string;
+    // UI only
+    nameAvatar!: string;
 
     constructor(init?: Partial<UserModel>) {
         Object.assign(this, init);

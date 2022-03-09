@@ -25,6 +25,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
         //             retry(1),
 
         return next.handle(req).pipe(
+            // @ts-ignore
             catchError((response) => {
                 if (response instanceof HttpErrorResponse) {
                     // console.error(response.error);
@@ -59,7 +60,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
                         }
                     }
                 } else {
-                    return throwError(response);
+                    throwError(response);
                 }
             })
         );

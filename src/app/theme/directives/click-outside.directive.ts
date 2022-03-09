@@ -44,7 +44,9 @@ export class ClickOutsideDirective implements OnInit, AfterViewInit, OnDestroy {
                 fromEvent(this._document, 'click') ,
                 fromEvent(this._document, 'auxclick') ,
                 fromEvent(this._document, 'touchend')
+                // @ts-ignore
             ).subscribe((event: MouseEvent | TouchEvent) => {
+                // @ts-ignore
                 const currentTarget: EventTarget = event.target;
                 //
                 if (!!currentTarget

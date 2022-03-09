@@ -66,7 +66,8 @@ export class RefreshTokenInterceptor implements HttpInterceptor {
                 return throwError(error);
             }));
         } else {
-            return next.handle(req).pipe(catchError((error) => {
+            // @ts-ignore
+            return next.handle(req).pipe(catchError((error: HttpErrorResponse) => {
                 const errorResponse = error as HttpErrorResponse;
                 if (errorResponse.status === 401)
                 // this.store.dispatch(new Logout());

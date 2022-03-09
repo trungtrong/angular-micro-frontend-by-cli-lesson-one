@@ -4,6 +4,10 @@
     "compilerOptions": {
         "baseUrl": "src",
         "outDir": "./dist/out-tsc",
+        // "forceConsistentCasingInFileNames": true,
+        // "strict": true, Should not use "strict", it will enable strict mode for TypeScript
+        "noImplicitReturns": true, // check return value rule
+        "noFallthroughCasesInSwitch": true,
         "sourceMap": true,
         "declaration": false,
         "downlevelIteration": true,
@@ -74,13 +78,14 @@
             "@svg-icons": [
                 "assets/icons/svg-icons.constants.ts"
             ]
-        }
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true
     },
     "angularCompilerOptions": {
         "annotationsAs": "static fields",
         "annotateForClosureCompiler": true,
         "preserveWhitespaces": false,
-        "fullTemplateTypeCheck": true,
         "strictTemplates": true,
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,

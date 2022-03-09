@@ -10,27 +10,27 @@ import { SvgIconsRegistry } from '@app/core/services';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SvgIconComponent implements OnInit {
-    @HostBinding('style.width') _widthProperty: string;
-    @HostBinding('style.color') _colorProperty: string;
+    @HostBinding('style.width') _widthProperty: string | undefined;
+    @HostBinding('style.color') _colorProperty: string | undefined;
 
-    private _name: string;
+    private _name: string | undefined;
     @Input()
-    get name(): string {
+    get name(): string | undefined {
         return this._name;
     }
 
-    set name(value: string) {
+    set name(value: string | undefined) {
         this._name = value;
         //
         this.generateIcon();
     }
 
-    private _data: string;
+    private _data: string | undefined;
     @Input()
-    get data(): string {
+    get data(): string | undefined {
         return this._data;
     }
-    set data(data: string) {
+    set data(data: string | undefined) {
         this._data = data;
         //
         this.generateIcon();
@@ -48,7 +48,7 @@ export class SvgIconComponent implements OnInit {
         this._colorProperty = value ?? null;
     }
 
-    private _svgIcon: SVGElement;
+    private _svgIcon: SVGElement | undefined;
 
     constructor(private _elementRef: ElementRef,
                 private _svgIconRegistry: SvgIconsRegistry,
@@ -65,7 +65,7 @@ export class SvgIconComponent implements OnInit {
             this._elementRef.nativeElement.removeChild(this._svgIcon);
         }
         //
-        const svgData: string = !!this.name
+        const svgData: string | null | undefined = !!this.name
             ? this._svgIconRegistry.getIcon(this.name)
             : this.data
                 ? this.data : null;
@@ -74,7 +74,7 @@ export class SvgIconComponent implements OnInit {
         this._elementRef.nativeElement.appendChild(this._svgIcon);
     }
 
-    private svgElementFromString(svgContent: string): SVGElement {
+    private svgElementFromString(svgContent: string | null | undefined): SVGElement {
         if (!svgContent) {
             return this._document.createElementNS('http://www.w3.org/2000/svg', 'path');
         }

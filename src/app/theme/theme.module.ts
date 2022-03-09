@@ -77,7 +77,7 @@ const DIRECTIVES = [
     HighlightDirective,
     ClickOutsideDirective
 ];
-const PIPES = [
+const PIPES: any[] = [
 ];
 
 @NgModule({

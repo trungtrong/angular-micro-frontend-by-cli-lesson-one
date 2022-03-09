@@ -14,7 +14,7 @@ export class ErrorComponent implements OnInit {
     ngOnInit() {
     }
 
-    logout(e) {
+    logout(e: Event) {
         e.stopPropagation();
         e.preventDefault();
         this.authenticationService.logout();

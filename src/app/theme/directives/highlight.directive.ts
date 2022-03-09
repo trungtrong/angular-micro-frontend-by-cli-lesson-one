@@ -9,7 +9,7 @@ import {
     selector: '[appHighlight]'
 })
 export class HighlightDirective implements OnInit {
-    @HostBinding('style.backgroundColor') backgroundColor: string;
+    @HostBinding('style.backgroundColor') backgroundColor: string | undefined;
 
     constructor(el: ElementRef) {
         console.log(el);

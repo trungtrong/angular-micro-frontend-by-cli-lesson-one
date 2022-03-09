@@ -3,7 +3,7 @@ import {QuicklinkModule} from 'ngx-quicklink';
 //
 import {ThemeModule} from '@app/theme';
 
-const COMPONENTS = [
+const COMPONENTS: any[] = [
 ];
 
 @NgModule({
