@@ -2,7 +2,11 @@ module.exports = {
     prefix: '',
     purge: {
         enabled: false,
-        content: ['./src/**/*.html', './src/**/*.ts'],
+        content: [
+            './src/**/*.{html,ts}',
+            './projects/app2-restaurant/src/**/*.{html,ts}',
+            './projects/app2-orders/src/**/*.{html,ts}'
+        ],
     },
     darkMode: "class", // or 'media' or 'class'
     theme: {
