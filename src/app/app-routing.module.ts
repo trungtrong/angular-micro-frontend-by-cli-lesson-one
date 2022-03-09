@@ -13,14 +13,6 @@ const routes: Routes = [
         loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
     },
     {
-        path: 'restaurants',
-        loadChildren: () => import('./modules/restaurant/restaurant.module').then(m => m.RestaurantModule),
-    },
-    {
-        path: 'order',
-        loadChildren: () => import('./modules/order/order.module').then(m => m.OrderModule),
-    },
-    {
         path: '', redirectTo: 'home', pathMatch: 'full'
     },
     { path: '**', component: ErrorComponent } // PageNotFoundComponent
