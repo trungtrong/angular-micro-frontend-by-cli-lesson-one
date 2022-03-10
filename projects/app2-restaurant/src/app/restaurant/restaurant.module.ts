@@ -4,7 +4,7 @@ import { RestaurantComponent } from './restaurant.component';
 import { RouterModule, Routes } from '@angular/router';
 //
 import { RestaurantDetailComponent } from './detail/detail.component';
-// import { OrderComponent } from '../order/order.component';
+import { MfeOrderComponentComponent } from './mfe-order-component/mfe-order-component.component';
 
 const routes: Routes = [
     {
@@ -15,16 +15,17 @@ const routes: Routes = [
         path: ':slug',
         component: RestaurantDetailComponent,
     },
-    // {
-    //     path: ':slug/order',
-    //     component: OrderComponent,
-    // }
+    {
+        path: ':slug/order',
+        component: MfeOrderComponentComponent
+    }
 ];
 
 @NgModule({
     declarations: [
         RestaurantComponent,
-        RestaurantDetailComponent
+        RestaurantDetailComponent,
+        MfeOrderComponentComponent
     ],
     imports: [
         CommonModule,
