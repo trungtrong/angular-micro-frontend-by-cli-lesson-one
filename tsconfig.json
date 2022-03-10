@@ -77,6 +77,10 @@
             ],
             "@svg-icons": [
                 "assets/icons/svg-icons.constants.ts"
+            ],
+            "utils": [
+              "dist/utils/utils",
+              "dist/utils"
             ]
         },
         "resolveJsonModule": true,
