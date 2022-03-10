@@ -1,27 +1,28 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {ErrorHandler, NgModule} from '@angular/core';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-import {RouterModule} from '@angular/router';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {QuicklinkModule} from 'ngx-quicklink';
-import {JwtInterceptor, JwtModule} from '@auth0/angular-jwt';
+import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QuicklinkModule } from 'ngx-quicklink';
+import { JwtInterceptor, JwtModule } from '@auth0/angular-jwt';
 // NgRx
-import {StoreModule} from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 // Ngxs
-import {NgxsModule} from '@ngxs/store';
-import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
-import {NgxsLoggerPluginModule} from '@ngxs/logger-plugin';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 //
-import {ThemeModule} from './theme';
-import {AppRoutingModule} from './app-routing.module';
-import {SharedModule} from './shared/shared.module';
-import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {CoreModule} from '@app/core/core.module';
+import { UtilsModule } from '@utils';
+import { ThemeModule } from './theme';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CoreModule } from '@app/core/core.module';
 //
-import {ACCESS_TOKEN_KEY, AUTH_SCHEME} from './shared/constants';
-import {AppComponent} from './app.component';
+import { ACCESS_TOKEN_KEY, AUTH_SCHEME } from './shared/constants';
+import { AppComponent } from './app.component';
 import { environment } from '@environment';
 // NgRx Example 3
 //
@@ -89,7 +90,8 @@ export function accessTokenGetter() {
         }),
         NgxsLoggerPluginModule.forRoot({
             disabled: environment.production
-        })
+        }),
+        UtilsModule
     ],
     providers: [
         JwtInterceptor,

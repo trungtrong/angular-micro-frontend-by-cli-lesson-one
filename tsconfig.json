@@ -2,7 +2,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": "./",
         "outDir": "./dist/out-tsc",
         // "forceConsistentCasingInFileNames": true,
         // "strict": true, Should not use "strict", it will enable strict mode for TypeScript
@@ -28,59 +28,62 @@
                 "../node_modules/jszip/dist/jszip.min.js"
             ],
             "@environment": [
-                "environments/environment.ts"
+                "src/environments/environment.ts"
             ],
             "@environments/*": [
-                "environments/*"
+                "src/environments/*"
             ],
             "@app/utilities": [
-                "app/utilities"
+                "src/app/utilities"
             ],
             "@app/core/*": [
-                "app/core/*"
+                "src/app/core/*"
             ],
             "@app/theme": [
-                "app/theme"
+                "src/app/theme"
             ],
             "@app/modules/*": [
-                "app/modules/*"
+                "src/app/modules/*"
             ],
             "@app/shared/*": [
-                "app/shared/*.ts"
+                "src/app/shared/*.ts"
             ],
             "@app/shared/components": [
-                "app/shared/components/index.ts"
+                "src/app/shared/components/index.ts"
             ],
             "@app/shared/components/*": [
-                "app/shared/components/*"
+                "src/app/shared/components/*"
             ],
             "@app/shared/models": [
-                "app/shared/models/index.ts"
+                "src/app/shared/models/index.ts"
             ],
             "@app/services/endpoints": [
-                "app/services/endpoints.ts"
+                "src/app/services/endpoints.ts"
             ],
             "@app/services/*": [
-                "app/services/*"
+                "src/app/services/*"
             ],
             "@app/models": [
-                "app/models"
+                "src/app/models"
             ],
             "@app/models/*": [
-                "app/models/*"
+                "src/app/models/*"
             ],
             "@app/data/*": [
-                "app/data/*"
+                "src/app/data/*"
             ],
             "@app/state/*": [
-                "app/state/*"
+                "src/app/state/*"
             ],
             "@svg-icons": [
-                "assets/icons/svg-icons.constants.ts"
+                "src/assets/icons/svg-icons.constants.ts"
             ],
-            "utils": [
-              "dist/utils/utils",
-              "dist/utils"
+            // "@styles/*": [
+            //     "styles/*"
+            // ],
+            "@utils": [
+                "./dist/utils/utils",
+                "./dist/utils"
             ]
         },
         "resolveJsonModule": true,
