@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from "@angular/router";
+//
 import { UtilsComponent } from './utils.component';
 
-
-
 @NgModule({
-  declarations: [
-    UtilsComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    UtilsComponent
-  ]
+    declarations: [
+        UtilsComponent
+    ],
+    imports: [
+        RouterModule,
+    ],
+    exports: [
+        UtilsComponent
+    ]
 })
-export class UtilsModule { }
+export class UtilsModule {
+}
