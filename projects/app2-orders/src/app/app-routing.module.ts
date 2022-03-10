@@ -5,10 +5,10 @@ const routes: Routes = [
     {
         path: 'order',
         loadChildren: () => import('./order/order.module').then(m => m.OrderModule),
-      },
+    },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
