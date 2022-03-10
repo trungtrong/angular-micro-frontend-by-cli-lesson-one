@@ -8,7 +8,7 @@ const routes: Routes = [
         path: '',
         component: await new MfeUtil().loadRemoteFile({
             remoteName: "home",
-            remoteEntry: `http://localhost:4203/remoteHome.js`,
+            remoteEntry: `http://localhost:4200/remoteHome.js`,
             exposedFile: "HomeComponent",
             exposeFileType: FileType.Component,
         }).then((m) => m.HomeComponent),

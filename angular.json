@@ -98,7 +98,7 @@
             },
             "development": {
               "browserTarget": "angular-micro-frontend-by-cli-lesson-one:build:development",
-              "port": 4203
+              "port": 4200
             }
           }
         },
