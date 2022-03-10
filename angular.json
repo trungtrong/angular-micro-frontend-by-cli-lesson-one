@@ -30,7 +30,8 @@
             "allowedCommonJsDependencies": [
               "faker",
               "devextreme",
-              "devextreme-angular"
+              "devextreme-angular",
+              "stream"
             ],
             "styles": [
               "node_modules/devextreme/dist/css/dx.dark.css",

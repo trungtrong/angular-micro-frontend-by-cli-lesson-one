@@ -84,10 +84,11 @@
             "@utils": [
                 "./dist/utils/utils",
                 "./dist/utils"
-            ]
+            ],
+            "stream": [ "./node_modules/stream-browserify" ]
         },
         "resolveJsonModule": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
     },
     "angularCompilerOptions": {
         "annotationsAs": "static fields",

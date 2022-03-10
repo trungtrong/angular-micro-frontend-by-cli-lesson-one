@@ -33,6 +33,7 @@
                 "moment": "^2.29.1",
                 "ngx-quicklink": "^0.2.6",
                 "rxjs": "~6.5.5",
+                "stream-browserify": "^3.0.0",
                 "tailwindcss": "^3.0.23",
                 "tslib": "^2.0.0",
                 "zone.js": "~0.11.4"
@@ -15512,6 +15513,28 @@
                 "node": ">= 0.6"
             }
         },
+        "node_modules/stream-browserify": {
+            "version": "3.0.0",
+            "resolved": "https://registry.npmjs.org/stream-browserify/-/stream-browserify-3.0.0.tgz",
+            "integrity": "sha512-H73RAHsVBapbim0tU2JwwOiXUj+fikfiaoYAKHF3VJfA0pe2BCzkhAHBlLG6REzE+2WNZcxOXjK7lkso+9euLA==",
+            "dependencies": {
+                "inherits": "~2.0.4",
+                "readable-stream": "^3.5.0"
+            }
+        },
+        "node_modules/stream-browserify/node_modules/readable-stream": {
+            "version": "3.6.0",
+            "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz",
+            "integrity": "sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==",
+            "dependencies": {
+                "inherits": "^2.0.3",
+                "string_decoder": "^1.1.1",
+                "util-deprecate": "^1.0.1"
+            },
+            "engines": {
+                "node": ">= 6"
+            }
+        },
         "node_modules/streamroller": {
             "version": "3.0.2",
             "resolved": "https://registry.npmjs.org/streamroller/-/streamroller-3.0.2.tgz",
@@ -28931,6 +28954,27 @@
             "resolved": "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz",
             "integrity": "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=",
             "dev": true
+        },
+        "stream-browserify": {
+            "version": "3.0.0",
+            "resolved": "https://registry.npmjs.org/stream-browserify/-/stream-browserify-3.0.0.tgz",
+            "integrity": "sha512-H73RAHsVBapbim0tU2JwwOiXUj+fikfiaoYAKHF3VJfA0pe2BCzkhAHBlLG6REzE+2WNZcxOXjK7lkso+9euLA==",
+            "requires": {
+                "inherits": "~2.0.4",
+                "readable-stream": "^3.5.0"
+            },
+            "dependencies": {
+                "readable-stream": {
+                    "version": "3.6.0",
+                    "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz",
+                    "integrity": "sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==",
+                    "requires": {
+                        "inherits": "^2.0.3",
+                        "string_decoder": "^1.1.1",
+                        "util-deprecate": "^1.0.1"
+                    }
+                }
+            }
         },
         "streamroller": {
             "version": "3.0.2",
