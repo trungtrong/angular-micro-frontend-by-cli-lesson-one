@@ -1,6 +1,6 @@
 import {environment} from '@environment';
 
-export const API_URL = !!environment.baseUrl ? `${environment.baseUrl}` : `${window.location.origin}`;
+export const API_URL = !!environment.moduleFederationUrl.app1 ? `${environment.moduleFederationUrl.app1}` : `${window.location.origin}`;
 
 export const API_ENDPOINT = {
     //

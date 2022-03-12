@@ -53,15 +53,14 @@ export class MfeUtil {
      * - https://webpack.js.org/plugins/module-federation-plugin/
      */
     private findExposedModule = async <T>(uniqueName: string, exposedFile: string): Promise<T | undefined> => {
-        let Module: T | undefined;
         // Initializes the shared scope. Fills it with known provided modules from this build and all remotes
         await __webpack_init_sharing__('default');
         const container: Container = (window as any)[uniqueName];  // or get the container somewhere else
         // Initialize the container, it may provide shared modules
         await container.init(__webpack_share_scopes__.default);
         const factory = await container.get(exposedFile);
-        Module = factory();
-        return Module
+        const Module = factory();
+        return Module as T;
     }
 
     /**

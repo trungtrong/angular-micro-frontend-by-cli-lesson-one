@@ -41,7 +41,7 @@ const routes: Routes = [
 
 const config: ExtraOptions = {
     useHash: false,
-    preloadingStrategy: QuicklinkStrategy,
+    // preloadingStrategy: QuicklinkStrategy,
     relativeLinkResolution: 'corrected',
     scrollPositionRestoration: "enabled"
 };

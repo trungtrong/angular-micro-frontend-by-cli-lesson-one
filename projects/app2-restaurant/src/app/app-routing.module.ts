@@ -8,10 +8,6 @@ export const mfe = new MfeUtil();
 
 const routes: Routes = [
     {
-        path: 'restaurants',
-        loadChildren: () => import('./restaurant/restaurant.module').then(m => m.RestaurantModule),
-    },
-    {
         path: '',
         component: await mfe.loadRemoteFile({
             remoteName: 'home',
@@ -19,6 +15,10 @@ const routes: Routes = [
             exposedFile: "HomeComponent",
             exposeFileType: FileType.Component,
         }).then((m) => m.HomeComponent),
+    },
+    {
+        path: 'restaurants',
+        loadChildren: () => import('./restaurant/restaurant.module').then(m => m.RestaurantModule),
     },
     {
         path: 'order',

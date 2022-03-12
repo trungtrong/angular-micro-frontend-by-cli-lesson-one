@@ -4,9 +4,9 @@
     "scripts": {
         "ng": "ng",
         "start:all": "npm run start:app1 & npm run start:app2 & npm run start:app3",
-        "start:app1": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve --liveReload=false --open=false",
-        "start:app2": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve app2-restaurant",
-        "start:app3": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve app2-orders",
+        "start:app1": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve --liveReload=false --open=false --port=4200",
+        "start:app2": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve app2-restaurant --port=4204",
+        "start:app3": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve app2-orders --port=4205",
         "build:app1": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --configuration production --configuration=production",
         "build:app2": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build app2-restaurant --configuration production --configuration=production",
         "build:app3": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build app2-orders --configuration production --configuration=production",

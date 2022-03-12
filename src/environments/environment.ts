@@ -5,7 +5,11 @@
 export const environment = {
     production: false,
     debug: true,
-    baseUrl: 'localhost:4200',
+    moduleFederationUrl: {
+        app1: 'http://localhost:4200/',
+        app2: 'http://localhost:4204/',
+        app3: 'http://localhost:4205/'
+    }
 };
 
 /*
