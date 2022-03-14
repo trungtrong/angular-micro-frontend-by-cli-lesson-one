@@ -1,8 +1,8 @@
-import webpackConfig from './webpack.config';
-import {Configuration} from 'webpack';
+import { getWebpackConfig } from './webpack.config';
+import { Configuration } from 'webpack';
 
 export const prodWebpackConfig: Configuration = {
-  ...webpackConfig,
+    ...getWebpackConfig('production'),
   output: {
     publicPath: 'http://localhost:82/', // production server,
 	uniqueName: 'orders',
