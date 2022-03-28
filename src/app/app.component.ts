@@ -27,6 +27,7 @@ export class AppComponent implements AfterViewChecked {
             // CAUTION: I'm using CSS to include a small delay such that this loading
             // indicator won't be seen by people with sufficiently fast connections.
         });
+        console.log('App 1');
     }
 
     // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method

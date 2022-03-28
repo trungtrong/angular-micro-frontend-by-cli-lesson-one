@@ -1,4 +1,4 @@
-<div class="relative flex items-center justify-center h-auto">
+<!-- <div class="relative flex items-center justify-center h-auto">
 <div class="max-w-3xl w-full p-8 bg-gray-100 bg-gray-700 dark:text-white shadow-xl h-full">
   <div class="flex">
     <div>
@@ -15,4 +15,28 @@
   </div>
 </div>
 </div>
+ -->
 
+<!--
+BaseService
+-->
+    <div [ngStyle]="{
+        backgroundColor: color
+        }"
+        class="w-40 h-20 border-4">
+        My Color
+    </div>
+    <div (click)="onChangeColorToBlue()"
+        class="w-fit h-fit border-4">Change Color to Blue</div>
+
+<!--
+Shared ngxs
+-->
+<ul>
+    <li *ngFor="let user of users" class="flex items-center justify-center">
+        <span>{{user.name}}</span>
+        <button type="button" class="" (click)="onRemoveUser(user)">Remove User</button>
+    </li>
+</ul>
+
+<button type="button" class="" (click)="onAddUser()">Add User</button>

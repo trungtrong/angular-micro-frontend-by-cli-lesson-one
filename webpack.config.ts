@@ -43,7 +43,28 @@ export function getWebpackConfig(mode: 'none' | 'development' | 'production' = '
                         strictVersion: true,
                         requiredVersion: deps["@angular/router"],
                     },
-                    'place-my-order-assets': { eager: true, singleton: true, strictVersion: true },
+                    'utils': { singleton: true, eager: true },
+                    '@ngxs/store': { singleton: true, eager: true },
+                    '@ngxs/devtools-plugin': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["@ngxs/devtools-plugin"]
+                    },
+                    'ngx-quicklink': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["ngx-quicklink"]
+                    },
+                    'lodash-es': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["lodash-es"]
+                    },
+                    'rxjs': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["rxjs"]
+                    },
                 }
             })
         ]
@@ -52,4 +73,5 @@ export function getWebpackConfig(mode: 'none' | 'development' | 'production' = '
 
 export const webpackConfig: Configuration = getWebpackConfig('development');
 
+// Angular Compiler need it
 export default webpackConfig;

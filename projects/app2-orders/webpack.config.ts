@@ -41,7 +41,32 @@ export function getWebpackConfig(mode: 'none' | 'development' | 'production' = '
                         strictVersion: true,
                         requiredVersion: deps["@angular/router"]
                     },
-                    'place-my-order-assets': { eager: true, singleton: true },
+                    'utils': { singleton: true, eager: true },
+                    '@ngxs/store': {
+                        eager: true,
+                        singleton: true,
+                        requiredVersion: deps["ngxs/store"]
+                    },
+                    '@ngxs/devtools-plugin': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["@ngxs/devtools-plugin"]
+                    },
+                    'ngx-quicklink': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["ngx-quicklink"]
+                    },
+                    'lodash-es': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["lodash-es"]
+                    },
+                    'rxjs': {
+                        singleton: true,
+                        eager: true,
+                        requiredVersion: deps["rxjs"]
+                    },
                 }
             })
         ]

@@ -11,3 +11,14 @@ export * from './lib/utils.module';
     you need to export your mfe-utils.ts in the public-api.ts file.
  */
 export * from './lib/mfe.utils';
+
+/*
+ * Share Services - DI
+ */
+export * from './core/services/base.service';
+/*
+ * Share State
+ */
+export * from './core/store/app-lookup/app-lookup.actions';
+export * from './core/store/app-lookup/app-lookup.state';
+export * from './core/store/models';

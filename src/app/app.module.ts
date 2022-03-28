@@ -33,6 +33,7 @@ import {
     FormatInterceptor,
     ProfilingInterceptor
 } from '@app/core/interceptors';
+import { UserState } from 'projects/utils/src/public-api';
 
 // Step 1: set HTTP INTERCEPTOR
 export function accessTokenGetter() {
@@ -81,7 +82,7 @@ export function accessTokenGetter() {
         }),*/
         // start monitoring app's side effects
         // EffectsModule.forRoot([]),
-        NgxsModule.forRoot([], {
+        NgxsModule.forRoot([UserState], {
             developmentMode: !environment.production,
             selectorOptions: { injectContainerState: false }
         }),

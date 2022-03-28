@@ -85,6 +85,9 @@
                 "./dist/utils/utils",
                 "./dist/utils"
             ],
+            "@utils/core/services": [
+                "./dist/utils/core/services"
+            ],
             "stream": [ "./node_modules/stream-browserify" ]
         },
         "resolveJsonModule": true,

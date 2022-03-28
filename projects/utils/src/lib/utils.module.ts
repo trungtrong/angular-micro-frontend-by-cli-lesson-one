@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
+import { QuicklinkModule } from 'ngx-quicklink';
 //
 import { UtilsComponent } from './utils.component';
 
@@ -9,6 +10,7 @@ import { UtilsComponent } from './utils.component';
     ],
     imports: [
         RouterModule,
+        QuicklinkModule,
     ],
     exports: [
         UtilsComponent
